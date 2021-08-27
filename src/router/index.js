@@ -20,22 +20,38 @@ const routes = [
   {
     path: '/home',
     name: 'home',
-    component: Home
+    component: Home,
+    beforeEnter(to, from, next) {
+      document.title = "主页"
+      next()
+    }
   },
   {
     path: '/category',
     name: 'category',
-    component: Category
+    component: Category,
+    beforeEnter(to, from, next) {
+      document.title = "分类"
+      next()
+    }
   },
   {
     path: '/cart',
     name: 'cart',
-    component: Cart
+    component: Cart,
+    beforeEnter(to, from, next) {
+      document.title = "购物车"
+      next()
+    }
   },
   {
     path: '/profile',
     name: 'profile',
-    component: Profile
+    component: Profile,
+    beforeEnter(to, from, next) {
+      document.title = "我的"
+      next()
+    }
   },
   {
     path: '/detail/:id',
@@ -43,7 +59,11 @@ const routes = [
   },
   {
     path: '*',
-    component: Error
+    component: Error,
+    beforeEnter(to, from, next) {
+      document.title = "出错啦"
+      next()
+    }
   }
 ]
 const router = new VueRouter({
