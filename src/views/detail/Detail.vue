@@ -162,6 +162,7 @@
 
             // 2.3.获取商品信息
             this.goods = new Goods(data.itemInfo, data.columns, data.shopInfo.services);
+            document.title = this.goods.title
 
             // 2.4.获取店铺信息
             this.shop = new Shop(data.shopInfo);
