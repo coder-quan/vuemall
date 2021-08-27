@@ -1,4 +1,5 @@
 # vuemall
+接口涉及隐私，此项目中的接口只能获取部分首页数据，将接口地址更换为coderwhy老师的接口便可正常运行
 ## Project setup
 ```
 npm install
