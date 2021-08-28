@@ -13,6 +13,7 @@
 </template>
 
 <script>
+  	import Bus from './Bus'
 	export default {
 		name: "Swiper",
     props: {
@@ -54,14 +55,15 @@
     },
     mounted: function () {
       // 1.操作DOM, 在前后添加Slide
-      setTimeout(() => {
-        if(this.$refs.swiper){
+      Bus.$on("loadAll", data => {
+      // 通过事件总线在轮播图加载时进行操作
+        if(data ) {
+          console.log(data)
           this.handleDom()
-        }
-
         // 2.开启定时器
         this.startTimer();
-      }, 2000)
+        }
+      })
     },
     methods: {
       /**
