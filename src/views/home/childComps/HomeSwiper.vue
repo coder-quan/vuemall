@@ -10,6 +10,7 @@
 
 <script>
   import {Swiper, SwiperItem} from 'components/common/swiper'
+  import Bus from 'components/common/swiper/Bus'
 
   export default {
     name: "HomeSwiper",
@@ -22,6 +23,10 @@
     components: {
       Swiper,
       SwiperItem
+    },
+    updated () {
+      // 在banners更新也就是图片加载时触发此事件，通过事件总线传给swiper组件
+      Bus.$emit("loadAll", true)
     }
   }
 </script>
