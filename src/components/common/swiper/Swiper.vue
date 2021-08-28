@@ -64,6 +64,10 @@
         }
       })
     },
+    beforeDestroy () {
+      // 取消监听
+      Bus.$off("loadAll")
+    },
     methods: {
       /**
        * 操作DOM, 在DOM前后添加Slide
