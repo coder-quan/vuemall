@@ -22,6 +22,9 @@
         type: Array,
         default: []
       }
+    },
+    updated () {
+      Bus.$emit("loadAll", true)
     }
   }
 </script >
