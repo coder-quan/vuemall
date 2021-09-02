@@ -83,8 +83,11 @@
       window.addEventListener('scroll', this.isShow)
     },
 
-    updated () {
-      window.scrollTo(0, this.goods[this.currentType].location)
+    // 避免在updated中更改状态，直接在watch中检测并更改
+    watch: {
+      currentType() {
+        window.scrollTo(0, this.goods[this.currentType].location)
+      }
     },
 
     // 从别的页面回来切回主页时恢复原来的位置
