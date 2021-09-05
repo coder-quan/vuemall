@@ -59,6 +59,7 @@
   }
   .info-size tr:first-child td:not(td:first-child) {
     line-height: normal;
+    padding: 10px 3px;
   }
   .info-size tr:first-child td:first-child {
     align-self: center;
