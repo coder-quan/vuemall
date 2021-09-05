@@ -41,24 +41,38 @@
     border-collapse: collapse;
   }
   .info-size tr {
-    height: 30px;
+    height: auto;
     line-height: 30px;
     display: flex;
   }
   .info-size tr:nth-child(1) {
     background-color: lightgray;
   }
-  .info-size tr td, .info-param tr td  {
+  .info-size tr, .info-param tr {
     border-bottom: 1px solid rgba(0, 0, 0, .15);
+  }
+  .info-size tr td, .info-param tr td {
+    padding: 3px;
   }
   .info-size tr td {
     flex: 1;
+  }
+  .info-size tr:first-child td:not(td:first-child) {
+    line-height: normal;
+  }
+  .info-size tr:first-child td:first-child {
+    align-self: center;
+    height: 100%;
+    width: 100%;
   }
   .info-param {
     margin-top: 10px;
   }
   .info-param tr {
     height: 40px;
+  }
+  .info-param tr td:first-child {
+    width: 40%;
   }
   .info-param-key {
     min-width: 100px;
