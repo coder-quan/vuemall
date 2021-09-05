@@ -62,8 +62,6 @@
   }
   .info-size tr:first-child td:first-child {
     align-self: center;
-    height: 100%;
-    width: 100%;
   }
   .info-param {
     margin-top: 10px;
