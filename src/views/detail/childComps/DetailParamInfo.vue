@@ -54,15 +54,19 @@
   .info-size tr td, .info-param tr td {
     padding: 3px;
   }
-  .info-size tr td {
-    flex: 1;
-  }
   .info-size tr:first-child td:not(td:first-child) {
     line-height: normal;
     padding: 10px 3px;
   }
   .info-size tr:first-child td:first-child {
     align-self: center;
+  }
+  .info-size tr td:first-child {
+    width: 20%;
+  }
+  .info-size tr td:not(td:first-child) {
+    flex: 1;
+    text-align: center;
   }
   .info-param {
     margin-top: 10px;
