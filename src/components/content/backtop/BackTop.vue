@@ -1,7 +1,9 @@
 <template >
-  <div class="back-top" @click="toBackTop">
-    <img src = "~common/top.png" alt = "" >
-  </div>
+  <transition name="slide-fade">
+    <div class="back-top" @click="toBackTop">
+      <img src = "~common/top.png" alt = "" >
+    </div>
+  </transition>
 </template >
 
 <script >
@@ -44,5 +46,15 @@
   .back-top img {
     width: 60px;
     height: 60px;
+  }
+  /* 若transition没有设置name，则默认为v */
+  .slide-fade-enter-active {
+    transition: all 1s ease;
+  }
+  .slide-fade-leave-active {
+    transition: all 1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .slide-fade-enter, .slide-fade-leave-to {
+    opacity: 0;
   }
 </style >
